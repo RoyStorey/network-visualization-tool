@@ -2,13 +2,17 @@ import "../css/home.css";
 import "../css/leftSide.css";
 import "../css/rightSide.css";
 import React, { useState } from "react";
+<<<<<<< HEAD
 import 'react-tabulator/lib/styles.css';
 import { ReactTabulator } from 'react-tabulator'
+=======
+>>>>>>> bcf057b48c82d3cc56a7c7263ecaeadc6e674fe8
 
 function Home() {
   const [areaCovered, setAreaCovered] = useState("Area 6");
   const [editingMode, setEditingMode] = useState(false);
   const [savePreviewButton, setSaveButton] = useState("Saved");
+<<<<<<< HEAD
   const columns = [
     { title: "Name", field: "name", width: 150 },
     { title: "Age", field: "age", hozAlign: "left", formatter: "progress" },
@@ -25,6 +29,9 @@ function Home() {
     {id:5, name:"Margret Marmajuke", age:"16", col:"yellow", dob:"31/01/1999"},
   ];
   const [selectedswitch, setSelectedswitch] = useState({
+=======
+  const [selectedCircuit, setSelectedCircuit] = useState({
+>>>>>>> bcf057b48c82d3cc56a7c7263ecaeadc6e674fe8
     id: "N/A",
     desc: "N/A",
     bldg: "1558",
@@ -61,7 +68,11 @@ function Home() {
     <div class="toolContainer">
       <div class="leftSide">
         <div class="leftHeader">
+<<<<<<< HEAD
           <h2>Switches for {areaCovered}</h2>
+=======
+          <h2>Circuits for {areaCovered}</h2>
+>>>>>>> bcf057b48c82d3cc56a7c7263ecaeadc6e674fe8
         </div>
         <div class="leftBody">
           <div class="spreadsheet">
@@ -75,6 +86,7 @@ function Home() {
         </div>
       </div>
       <div class="rightSide">
+<<<<<<< HEAD
         <div class="switchContainer">
         <ReactTabulator
         data={data}
@@ -121,6 +133,48 @@ function Home() {
             </div>
           </div>
         </div>
+=======
+        <div class="circuitInfo">
+          <header>
+            <h2>Current Circuit: {selectedCircuit.id}</h2>
+          </header>
+          <div class="infoContainer">
+            <div class="infoItem">
+              <h5>Circuit ID:</h5>
+              <text>{selectedCircuit.id}</text>
+            </div>
+            <div class="infoItem">
+              <h5>Circuit Description:</h5>
+              <text>{selectedCircuit.desc}</text>
+            </div>
+            <div class="infoItem">
+              <h5>Building No:</h5>
+              <text>{selectedCircuit.bldg}</text>
+            </div>
+            <div class="infoItem">
+              <h5>Room No:</h5>
+              <text>{selectedCircuit.rm}</text>
+            </div>
+            <div class="infoItem">
+              <h5>Rack No:</h5>
+              <text>{selectedCircuit.rack}</text>
+            </div>
+            <div class="infoItem">
+              <h5>Panel No:</h5>
+              <text>{selectedCircuit.panel}</text>
+            </div>
+            <div class="infoItem">
+              <h5>Interface:</h5>
+              <text>{selectedCircuit.interface}</text>
+            </div>
+            <div class="infoItem">
+              <h5>Medium:</h5>
+              <text>{selectedCircuit.medium}</text>
+            </div>
+          </div>
+        </div>
+        <div class="racks">{Racks()}</div>
+>>>>>>> bcf057b48c82d3cc56a7c7263ecaeadc6e674fe8
       </div>
     </div>
   );
