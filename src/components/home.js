@@ -2,45 +2,58 @@ import "../css/home.css";
 import "../css/leftSide.css";
 import "../css/rightSide.css";
 import React, { useState } from "react";
-<<<<<<< HEAD
-import 'react-tabulator/lib/styles.css';
+import '/node_modules/react-tabulator/lib/styles.css';
+import '/node_modules/react-tabulator/css/tabulator_modern.css';
+// import '/node_modules/react-tabulator/css/tabulator_midnight.css';
 import { ReactTabulator } from 'react-tabulator'
-=======
->>>>>>> bcf057b48c82d3cc56a7c7263ecaeadc6e674fe8
 
 function Home() {
   const [areaCovered, setAreaCovered] = useState("Area 6");
   const [editingMode, setEditingMode] = useState(false);
   const [savePreviewButton, setSaveButton] = useState("Saved");
-<<<<<<< HEAD
-  const columns = [
-    { title: "Name", field: "name", width: 150 },
-    { title: "Age", field: "age", hozAlign: "left", formatter: "progress" },
-    { title: "Favourite Color", field: "col" },
-    { title: "Date Of Birth", field: "dob", hozAlign: "center" },
-    { title: "Rating", field: "rating", hozAlign: "center", formatter: "star" },
-    { title: "Passed?", field: "passed", hozAlign: "center", formatter: "tickCross" }
+  const switchColumns = [
+    { title: "portid", field: "portid",},
+    { title: "conn", field: "conn"},
+    { title: "vlan", field: "vlan"},
+    { title: "verified", field: "verified"},
+    { title: "initial", field: "initial"},
   ];
-  var data = [
-    {id:1, name:"Oli Bob", age:"12", col:"red", dob:""},
-    {id:2, name:"Mary May", age:"1", col:"blue", dob:"14/05/1982"},
-    {id:3, name:"Christine Lobowski", age:"42", col:"green", dob:"22/05/1982"},
-    {id:4, name:"Brendon Philips", age:"125", col:"orange", dob:"01/08/1980"},
-    {id:5, name:"Margret Marmajuke", age:"16", col:"yellow", dob:"31/01/1999"},
+  var switchData = [
+    {portid:'1/1/1', conn:"Stack Supervisor Link", vlan:'Dual-Active',verified:'07/26/22',initial:'JJH'},
+    {portid:'1/1/2', conn:"Link to GSOC SW -> Gig 0/2", vlan:'Trunk',verified:'07/26/22',initial:'JJH'},
+    {portid:'1/1/3', conn:"Video Wall Rack - mx-laptop-02", vlan:'220',verified:'10/04/22',initial:'WFR'},
+    {portid:'1/1/4', conn:"DOT Net Wifi AP", vlan:'57',verified:'10/04/22',initial:'WFR'},
+    {portid:'1/1/5', conn:"SCIF DESK 01 - mdt-clear-01", vlan:'220',verified:'10/04/22',initial:'WFR'},
+  ];
+  const switchListColumns = [
+    { title: "switch", field: "name", width: 150,},
+    { title: "bldg", field: "bldg"},
+    { title: "room", field: "room"},
+    { title: "rack", field: "rack"},
+    { title: "panel", field: "panel"},
+    { title: "u", field: "u"},
+  ];
+  var switchListData = [
+    {id:1, name:"ComCoreSW1", bldg:'1558',room:'27',rack:'14',panel:'10',u:'32'},
+    {id:2, name:"ComCoreSW2", bldg:'1558',room:'27',rack:'14',panel:'10',u:'33'},
+    {id:3, name:"ComCoreSW3", bldg:'1558',room:'27',rack:'14',panel:'10',u:'34'},
+    {id:4, name:"ComCoreSW4", bldg:'1558',room:'27',rack:'14',panel:'10',u:'35'},
+    {id:5, name:"ComCoreSW5", bldg:'1558',room:'27',rack:'14',panel:'10',u:'36'},
+    {id:1, name:"ComCoreSW1", bldg:'1558',room:'27',rack:'14',panel:'10',u:'32'},
+    {id:2, name:"ComCoreSW2", bldg:'1558',room:'27',rack:'14',panel:'10',u:'33'},
+    {id:3, name:"ComCoreSW3", bldg:'1558',room:'27',rack:'14',panel:'10',u:'34'},
+    {id:4, name:"ComCoreSW4", bldg:'1558',room:'27',rack:'14',panel:'10',u:'35'},
+    {id:5, name:"ComCoreSW5", bldg:'1558',room:'27',rack:'14',panel:'10',u:'36'},
   ];
   const [selectedswitch, setSelectedswitch] = useState({
-=======
-  const [selectedCircuit, setSelectedCircuit] = useState({
->>>>>>> bcf057b48c82d3cc56a7c7263ecaeadc6e674fe8
-    id: "N/A",
-    desc: "N/A",
-    bldg: "1558",
-    rm: "N/A",
-    rack: "N/A",
-    panel: "N/A",
-    interface: "N/A",
-    medium: "N/A",
+    portid: "1/1/1",
+    connection: "Stack Supervisor Link",
+    vlan: "Dual-Active",
+    verified: "07/26/22",
+    initial: "JJH",
+    runconf: "Running Configuration goes here."
   });
+
 
   function toggleEdit() {
     if (editingMode == true) {
@@ -68,15 +81,16 @@ function Home() {
     <div class="toolContainer">
       <div class="leftSide">
         <div class="leftHeader">
-<<<<<<< HEAD
           <h2>Switches for {areaCovered}</h2>
-=======
-          <h2>Circuits for {areaCovered}</h2>
->>>>>>> bcf057b48c82d3cc56a7c7263ecaeadc6e674fe8
         </div>
         <div class="leftBody">
           <div class="spreadsheet">
-            <h3>Need to get with Brandon before developing this part.</h3>
+            <ReactTabulator
+              selectable={1}
+              data={switchListData}
+              columns={switchListColumns}
+              layout={"fitColumns"}
+            />
           </div>
         </div>
         <div class="leftFooter">
@@ -86,95 +100,53 @@ function Home() {
         </div>
       </div>
       <div class="rightSide">
-<<<<<<< HEAD
         <div class="switchContainer">
-        <ReactTabulator
-        data={data}
-        columns={columns}
-        layout={"fitData"}
-        />
+          <div class="placeholder-port "></div>
+          <div class="placeholder-port "></div>
+          <div class="placeholder-port "></div>
+          <div class="placeholder-port "></div>
+          <div class="placeholder-port "></div>
+          <div class="placeholder-port "></div>
+          <div class="placeholder-port "></div>
+          <div class="placeholder-port "></div>
+          <div class="placeholder-port "></div>
+          <div class="placeholder-port "></div>
+          <div class="placeholder-port "></div>
+          <div class="placeholder-port "></div>
+          <div class="placeholder-port "></div>
+          <div class="placeholder-port "></div>
+          <div class="placeholder-port"></div>
+          <div class="placeholder-port"></div>
+          <div class="placeholder-port "></div>
+          <div class="placeholder-port "></div>
+          <div class="placeholder-port "></div>
+          <div class="placeholder-port "></div>
+          <div class="placeholder-port "></div>
+          <div class="placeholder-port "></div>
+          <div class="placeholder-port "></div>
+          <div class="placeholder-port "></div>
+          <div class="placeholder-port "></div>
+          <div class="placeholder-port "></div>
+          <div class="placeholder-port "></div>
+          <div class="placeholder-port "></div>
+          <div class="placeholder-port "></div>
+          <div class="placeholder-port "></div>
+          <div class="placeholder-port"></div>
+          <div class="placeholder-port"></div>    
         </div>
         <div class="switchInfo">
           <header>
-            <h2>Current Switch: {selectedswitch.id}</h2>
+            <h2>Current Switch: {selectedswitch.portid}</h2>
           </header>
           <div class="infoContainer">
-            <div class="infoItem">
-              <h5>Switch ID:</h5>
-              <text>{selectedswitch.id}</text>
-            </div>
-            <div class="infoItem">
-              <h5>Switch Description:</h5>
-              <text>{selectedswitch.desc}</text>
-            </div>
-            <div class="infoItem">
-              <h5>Building No:</h5>
-              <text>{selectedswitch.bldg}</text>
-            </div>
-            <div class="infoItem">
-              <h5>Room No:</h5>
-              <text>{selectedswitch.rm}</text>
-            </div>
-            <div class="infoItem">
-              <h5>Rack No:</h5>
-              <text>{selectedswitch.rack}</text>
-            </div>
-            <div class="infoItem">
-              <h5>Panel No:</h5>
-              <text>{selectedswitch.panel}</text>
-            </div>
-            <div class="infoItem">
-              <h5>Interface:</h5>
-              <text>{selectedswitch.interface}</text>
-            </div>
-            <div class="infoItem">
-              <h5>Medium:</h5>
-              <text>{selectedswitch.medium}</text>
-            </div>
+          <ReactTabulator
+              selectable={1}
+              data={switchData}
+              columns={switchColumns}
+              layout={"fitColumns"}
+            />
           </div>
         </div>
-=======
-        <div class="circuitInfo">
-          <header>
-            <h2>Current Circuit: {selectedCircuit.id}</h2>
-          </header>
-          <div class="infoContainer">
-            <div class="infoItem">
-              <h5>Circuit ID:</h5>
-              <text>{selectedCircuit.id}</text>
-            </div>
-            <div class="infoItem">
-              <h5>Circuit Description:</h5>
-              <text>{selectedCircuit.desc}</text>
-            </div>
-            <div class="infoItem">
-              <h5>Building No:</h5>
-              <text>{selectedCircuit.bldg}</text>
-            </div>
-            <div class="infoItem">
-              <h5>Room No:</h5>
-              <text>{selectedCircuit.rm}</text>
-            </div>
-            <div class="infoItem">
-              <h5>Rack No:</h5>
-              <text>{selectedCircuit.rack}</text>
-            </div>
-            <div class="infoItem">
-              <h5>Panel No:</h5>
-              <text>{selectedCircuit.panel}</text>
-            </div>
-            <div class="infoItem">
-              <h5>Interface:</h5>
-              <text>{selectedCircuit.interface}</text>
-            </div>
-            <div class="infoItem">
-              <h5>Medium:</h5>
-              <text>{selectedCircuit.medium}</text>
-            </div>
-          </div>
-        </div>
-        <div class="racks">{Racks()}</div>
->>>>>>> bcf057b48c82d3cc56a7c7263ecaeadc6e674fe8
       </div>
     </div>
   );

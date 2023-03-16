@@ -1,20 +1,18 @@
 .leftSide{
-    background-color:rgba(0, 0, 0, 0.308);
-<<<<<<< HEAD
-=======
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.452);
->>>>>>> bcf057b48c82d3cc56a7c7263ecaeadc6e674fe8
+    /* background-color:rgba(0, 0, 0, 0.308); */
     border-radius:1%;
     overflow: hidden;
     display:flex;
     flex-direction:column;
     flex:1;
+    height:min-content;
+    max-height:calc(100vh - 8rem);
+    outline:1px rgba(255, 255, 255, 0.1) solid;
 }
 
 .leftHeader{
-    background-color:rgba(0, 0, 0, 0.432);
+    background-color:rgba(0, 0, 0, 0.4);
     height:10%;
-    /* box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.418); */
     border-bottom:1px rgba(0, 0, 0, 0.089) solid;
     display:flex;
     justify-content: right;
@@ -24,15 +22,14 @@
 .leftHeader h2{
     font-weight:500;
 }
+
 .leftBody{
     background-color:transparent;
     display:flex;
-    flex:1;
-    padding:2rem;
+    overflow:auto;
 }
 .leftFooter{
-    background:linear-gradient(340deg, rgb(139, 0, 0), rgb(85, 8, 8));
-    /* box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.418); */
+    background:var(--red-gradient);
     height:10%;
     display:flex;
     align-items: center;
@@ -51,12 +48,10 @@
     font-weight:400;
 }
 .spreadsheet{
-    height:100%;
     width:100%;
     background-color:rgba(0, 0, 0, 0.432);
     display:flex;
     justify-content: center;
-    align-items: center;
     text-align: center;
 }
 .spreadsheet h1 {
