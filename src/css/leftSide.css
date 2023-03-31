@@ -4,14 +4,14 @@
     overflow: hidden;
     display:flex;
     flex-direction:column;
-    flex:1;
+    /* flex:1; */
     height:min-content;
     max-height:calc(100vh - 8rem);
-    outline:1px rgba(255, 255, 255, 0.1) solid;
+    /* outline:1px rgba(255, 255, 255, 0.1) solid; */
 }
 
 .leftHeader{
-    background-color:rgba(0, 0, 0, 0.4);
+    background:var(--red-gradient);
     height:10%;
     border-bottom:1px rgba(0, 0, 0, 0.089) solid;
     display:flex;
@@ -29,7 +29,7 @@
     overflow:auto;
 }
 .leftFooter{
-    background:var(--red-gradient);
+    /* background-color:rgba(0, 0, 0, 0.4); */
     height:10%;
     display:flex;
     align-items: center;
@@ -37,7 +37,7 @@
     padding:0rem 2rem;
 }
 .leftFooter h3{
-    font-weight:400;
+    font-weight:300;
 }
 .leftFooter h3:hover{
     cursor: pointer;

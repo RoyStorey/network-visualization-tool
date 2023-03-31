@@ -1,13 +1,25 @@
 import "../css/home.css";
 import "../css/leftSide.css";
 import "../css/rightSide.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import '/node_modules/react-tabulator/lib/styles.css';
 import '/node_modules/react-tabulator/css/tabulator_modern.css';
 // import '/node_modules/react-tabulator/css/tabulator_midnight.css';
 import { ReactTabulator } from 'react-tabulator'
 
 function Home() {
+  const [switchListData, setSwitchListData] = useState([]);
+
+  useEffect(()=>{
+    fetch(`http://172.16.220.110:8000/api/VisualizerSwitchList/?format=json`)
+        .then((response) => response.json())
+        .then((parsedDBData) => {
+          console.log(parsedDBData)
+          setSwitchListData(parsedDBData)
+        })
+        .catch((error) => console.error(error));
+    },[]);
+
   const [areaCovered, setAreaCovered] = useState("Area 6");
   const [editingMode, setEditingMode] = useState(false);
   const [savePreviewButton, setSaveButton] = useState("Saved");
@@ -26,26 +38,19 @@ function Home() {
     {portid:'1/1/5', conn:"SCIF DESK 01 - mdt-clear-01", vlan:'220',verified:'10/04/22',initial:'WFR'},
   ];
   const switchListColumns = [
-    { title: "switch", field: "name", width: 150,},
+    { title: "switch", field: "switch", width: 150,},
     { title: "bldg", field: "bldg"},
     { title: "room", field: "room"},
     { title: "rack", field: "rack"},
     { title: "panel", field: "panel"},
     { title: "u", field: "u"},
-  ];
-  var switchListData = [
-    {id:1, name:"ComCoreSW1", bldg:'1558',room:'27',rack:'14',panel:'10',u:'32'},
-    {id:2, name:"ComCoreSW2", bldg:'1558',room:'27',rack:'14',panel:'10',u:'33'},
-    {id:3, name:"ComCoreSW3", bldg:'1558',room:'27',rack:'14',panel:'10',u:'34'},
-    {id:4, name:"ComCoreSW4", bldg:'1558',room:'27',rack:'14',panel:'10',u:'35'},
-    {id:5, name:"ComCoreSW5", bldg:'1558',room:'27',rack:'14',panel:'10',u:'36'},
-    {id:1, name:"ComCoreSW1", bldg:'1558',room:'27',rack:'14',panel:'10',u:'32'},
-    {id:2, name:"ComCoreSW2", bldg:'1558',room:'27',rack:'14',panel:'10',u:'33'},
-    {id:3, name:"ComCoreSW3", bldg:'1558',room:'27',rack:'14',panel:'10',u:'34'},
-    {id:4, name:"ComCoreSW4", bldg:'1558',room:'27',rack:'14',panel:'10',u:'35'},
-    {id:5, name:"ComCoreSW5", bldg:'1558',room:'27',rack:'14',panel:'10',u:'36'},
+    { title: "mgmtip", field: "mgmtip"},
+    { title: "devtype", field: "devtype"},
+    { title: "ios", field: "ios"},
+    { title: "sn", field: "sn"},
   ];
   const [selectedswitch, setSelectedswitch] = useState({
+    switch:"ComCoreSW1",
     portid: "1/1/1",
     connection: "Stack Supervisor Link",
     vlan: "Dual-Active",
@@ -79,6 +84,73 @@ function Home() {
 
   return (
     <div class="toolContainer">
+      
+      <div class="top-container">
+        <div class="top-cell-container">
+          <div class="switchContainer">
+            <div class="placeholder-port "></div>
+            <div class="placeholder-port "></div>
+            <div class="placeholder-port "></div>
+            <div class="placeholder-port "></div>
+            <div class="placeholder-port "></div>
+            <div class="placeholder-port "></div>
+            <div class="placeholder-port "></div>
+            <div class="placeholder-port "></div>
+            <div class="placeholder-port "></div>
+            <div class="placeholder-port "></div>
+            <div class="placeholder-port "></div>
+            <div class="placeholder-port "></div>
+            <div class="placeholder-port "></div>
+            <div class="placeholder-port "></div>
+            <div class="placeholder-port"></div>
+            <div class="placeholder-port"></div>
+            <div class="placeholder-port "></div>
+            <div class="placeholder-port "></div>
+            <div class="placeholder-port "></div>
+            <div class="placeholder-port "></div>
+            <div class="placeholder-port "></div>
+            <div class="placeholder-port "></div>
+            <div class="placeholder-port "></div>
+            <div class="placeholder-port "></div>
+            <div class="placeholder-port "></div>
+            <div class="placeholder-port "></div>
+            <div class="placeholder-port "></div>
+            <div class="placeholder-port "></div>
+            <div class="placeholder-port "></div>
+            <div class="placeholder-port "></div>
+            <div class="placeholder-port"></div>
+            <div class="placeholder-port"></div>    
+          </div>
+          <div class="switchInfo">
+            <header>
+              <h2>Current Switch: {selectedswitch.switch}</h2>
+            </header>
+            <div class="infoContainer">
+            <ReactTabulator
+                selectable={1}
+                data={switchData}
+                columns={switchColumns}
+                layout={"fitColumns"}
+              />
+            </div>
+          </div>
+        </div>
+        <div class="top-cell-container">
+          <div class="switchInfo">
+            <header>
+              <h2>Switch VLANs:</h2>
+            </header>
+            <div class="infoContainer">
+            <ReactTabulator
+                selectable={1}
+                data={switchData}
+                columns={switchColumns}
+                layout={"fitColumns"}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="leftSide">
         <div class="leftHeader">
           <h2>Switches for {areaCovered}</h2>
@@ -90,6 +162,7 @@ function Home() {
               data={switchListData}
               columns={switchListColumns}
               layout={"fitColumns"}
+              options={{pagination: 'local', paginationSize:'5'}}
             />
           </div>
         </div>
@@ -97,55 +170,6 @@ function Home() {
           <h3 onClick={toggleEdit}>{editingMode ? "View" : "Edit"}</h3>
           <h4>- {editingMode ? "Editing" : "Viewing"} -</h4>
           <h3 onClick={resetSaved}>{savePreviewButton}</h3>
-        </div>
-      </div>
-      <div class="rightSide">
-        <div class="switchContainer">
-          <div class="placeholder-port "></div>
-          <div class="placeholder-port "></div>
-          <div class="placeholder-port "></div>
-          <div class="placeholder-port "></div>
-          <div class="placeholder-port "></div>
-          <div class="placeholder-port "></div>
-          <div class="placeholder-port "></div>
-          <div class="placeholder-port "></div>
-          <div class="placeholder-port "></div>
-          <div class="placeholder-port "></div>
-          <div class="placeholder-port "></div>
-          <div class="placeholder-port "></div>
-          <div class="placeholder-port "></div>
-          <div class="placeholder-port "></div>
-          <div class="placeholder-port"></div>
-          <div class="placeholder-port"></div>
-          <div class="placeholder-port "></div>
-          <div class="placeholder-port "></div>
-          <div class="placeholder-port "></div>
-          <div class="placeholder-port "></div>
-          <div class="placeholder-port "></div>
-          <div class="placeholder-port "></div>
-          <div class="placeholder-port "></div>
-          <div class="placeholder-port "></div>
-          <div class="placeholder-port "></div>
-          <div class="placeholder-port "></div>
-          <div class="placeholder-port "></div>
-          <div class="placeholder-port "></div>
-          <div class="placeholder-port "></div>
-          <div class="placeholder-port "></div>
-          <div class="placeholder-port"></div>
-          <div class="placeholder-port"></div>    
-        </div>
-        <div class="switchInfo">
-          <header>
-            <h2>Current Switch: {selectedswitch.portid}</h2>
-          </header>
-          <div class="infoContainer">
-          <ReactTabulator
-              selectable={1}
-              data={switchData}
-              columns={switchColumns}
-              layout={"fitColumns"}
-            />
-          </div>
         </div>
       </div>
     </div>

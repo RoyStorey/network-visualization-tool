@@ -20,6 +20,7 @@ from rest_framework import routers
 
 router= routers.DefaultRouter()
 router.register(r'Earlkits',views.EarlView, "Earlkit")
+router.register(r'VisualizerSwitchList',views.VisualizerSwitchListView, "VisualizerSwitchList")
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/',include(router.urls))
