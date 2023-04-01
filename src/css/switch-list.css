@@ -1,5 +1,5 @@
-.leftSide{
-    /* background-color:rgba(0, 0, 0, 0.308); */
+.bottom-Side{
+    /* background-color:var(--dark-gray-background); */
     /* border-radius:1%; */
     overflow: hidden;
     display:flex;
@@ -7,11 +7,12 @@
     /* flex:1; */
     height:min-content;
     max-height:calc(100vh - 8rem);
+    border-top:2px rgba(255, 255, 255, 0.719) solid;
     /* outline:1px rgba(255, 255, 255, 0.1) solid; */
 }
 
-.leftHeader{
-    background:var(--red-gradient);
+.bottom-Header{
+    /* background:var(--dark-gray-background); */
     height:10%;
     border-bottom:1px rgba(0, 0, 0, 0.089) solid;
     display:flex;
@@ -19,16 +20,16 @@
     align-items: center;
     padding: 0rem 2rem;
 }
-.leftHeader h2{
+.bottom-Header h2{
     font-weight:500;
 }
 
-.leftBody{
+.bottom-Body{
     background-color:transparent;
     display:flex;
     overflow:auto;
 }
-.leftFooter{
+.bottom-Footer{
     /* background-color:rgba(0, 0, 0, 0.4); */
     height:10%;
     display:flex;
@@ -36,15 +37,15 @@
     justify-content: space-between;
     padding:0rem 2rem;
 }
-.leftFooter h3{
+.bottom-Footer h3{
     font-weight:300;
 }
-.leftFooter h3:hover{
+.bottom-Footer h3:hover{
     cursor: pointer;
     text-decoration: underline;
     
 }
-.leftFooter h4{
+.bottom-Footer h4{
     font-weight:400;
 }
 .spreadsheet{

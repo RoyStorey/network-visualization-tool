@@ -1,6 +1,6 @@
 import "../css/home.css";
-import "../css/leftSide.css";
-import "../css/rightSide.css";
+import "../css/switch-info.css";
+import "../css/switch-list.css";
 import React, { useState, useEffect } from "react";
 import '/node_modules/react-tabulator/lib/styles.css';
 import '/node_modules/react-tabulator/css/tabulator_modern.css';
@@ -29,6 +29,10 @@ function Home() {
     { title: "vlan", field: "vlan"},
     { title: "verified", field: "verified"},
     { title: "initial", field: "initial"},
+  ];
+  const VLANColumns = [
+    { title: "vlan", field: "vlan", width: 150},
+    { title: "ips", field: "ips"},
   ];
   var switchData = [
     {portid:'1/1/1', conn:"Stack Supervisor Link", vlan:'Dual-Active',verified:'07/26/22',initial:'JJH'},
@@ -84,9 +88,11 @@ function Home() {
 
   return (
     <div class="toolContainer">
-      
       <div class="top-container">
         <div class="top-cell-container">
+        <header>
+              <h2>Current Switch: {selectedswitch.switch}</h2>
+            </header>
           <div class="switchContainer">
             <div class="placeholder-port "></div>
             <div class="placeholder-port "></div>
@@ -122,9 +128,6 @@ function Home() {
             <div class="placeholder-port"></div>    
           </div>
           <div class="switchInfo">
-            <header>
-              <h2>Current Switch: {selectedswitch.switch}</h2>
-            </header>
             <div class="infoContainer">
             <ReactTabulator
                 selectable={1}
@@ -137,40 +140,37 @@ function Home() {
         </div>
         <div class="top-cell-container">
           <div class="switchInfo">
-            <header>
-              <h2>Switch VLANs:</h2>
-            </header>
             <div class="infoContainer">
             <ReactTabulator
                 selectable={1}
                 data={switchData}
-                columns={switchColumns}
+                columns={VLANColumns}
                 layout={"fitColumns"}
               />
             </div>
           </div>
         </div>
       </div>
-      <div class="leftSide">
-        <div class="leftHeader">
+      <div class="bottom-Side">
+        <div class="bottom-Header">
           <h2>Switches for {areaCovered}</h2>
         </div>
-        <div class="leftBody">
+        <div class="bottom-Body">
           <div class="spreadsheet">
             <ReactTabulator
               selectable={1}
               data={switchListData}
               columns={switchListColumns}
               layout={"fitColumns"}
-              options={{pagination: 'local', paginationSize:'5'}}
+              options={{pagination: 'local', paginationSize:'6'}}
             />
           </div>
         </div>
-        <div class="leftFooter">
+        {/* <div class="bottom-Footer">
           <h3 onClick={toggleEdit}>{editingMode ? "View" : "Edit"}</h3>
           <h4>- {editingMode ? "Editing" : "Viewing"} -</h4>
           <h3 onClick={resetSaved}>{savePreviewButton}</h3>
-        </div>
+        </div> */}
       </div>
     </div>
   );

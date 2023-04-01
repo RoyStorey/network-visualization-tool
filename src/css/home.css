@@ -1,28 +1,28 @@
 :root {
-    --red-gradient:linear-gradient(340deg, rgba(7, 66, 133, 0.63),rgba(9, 42, 134, 0.63));
-    --gray-background:rgba(0, 0, 0, 0.4);
+    /* --red-gradient:linear-gradient(340deg, rgba(7, 66, 133, 0.63),rgba(9, 42, 134, 0.63)); */
+    --red-gradient:#007acc;
+    --blue-text:#ffffffd3;
+    --gray-background:#1e1e1e;
+    --gray-text:#4d4d4d;
+    --dark-gray-background:#00000040;
 }
 
 body{
-    background:linear-gradient(160deg ,rgb(21, 20, 29), rgb(18, 23, 41));
+    background:var(--gray-background);
     /* background:linear-gradient(160deg ,rgb(191, 193, 199), rgb(255, 255, 255)); */
-    color:white;
+    color:var(--blue-text);
+    font-family:'Courier New', Courier, monospace;
+    font-weight:100;
 }
 
 .toolContainer{
     min-height:calc(100vh - 4vh);
     box-sizing: border-box;
-    padding: 4rem 16rem;
+    padding: 4rem 20rem;
     display:flex;
     flex-direction:column;
-    gap:1rem;
+    gap:4rem;
 }
-
-.top-container{
-    display:flex;
-    flex-direction:row;
-}
-
 footer{
     height:4vh;
     padding:0rem 8rem;
