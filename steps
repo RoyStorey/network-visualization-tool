@@ -1,0 +1,22 @@
+pull switch data and put it into file
+
+read file into parse.py to parse out the interface data and put it into object format
+
+read the objects into djangodb for persistent storage
+    python3 ./manage.py loaddata ../src/functions/MyFile.json --format json
+
+    file looks like:
+[
+    {
+        "pk":"4b678b301dfd8a4e0dad910de3ae245b",
+        "model":"earlkit.VisualizerInterfaceList",
+        "fields":{
+            "hostname": "ComCoreSW1", "interface": "interface Port-channel1", "description": " description VSS Link", "verified": "", "swportmode": "trunk", "admindown": "Not Administratively Down"
+        }
+    }
+]
+
+
+front-end ---- ----------------------
+
+pull objects from djangodb and frontend them.
