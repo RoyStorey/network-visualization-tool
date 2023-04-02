@@ -9,26 +9,40 @@ import { ReactTabulator } from 'react-tabulator'
 
 function Home() {
   const [switchListData, setSwitchListData] = useState([]);
+  const [switchInterfaceListData, setInterfaceListData] = useState([]);
 
   useEffect(()=>{
     fetch(`http://172.16.220.110:8000/api/VisualizerSwitchList/?format=json`)
         .then((response) => response.json())
         .then((parsedDBData) => {
-          console.log(parsedDBData)
+          // console.log(parsedDBData)
           setSwitchListData(parsedDBData)
         })
         .catch((error) => console.error(error));
     },[]);
 
+    useEffect(()=>{
+      fetch(`http://172.16.220.110:8000/api/VisualizerInterfaceList/?format=json` + new URLSearchParams({
+        hostname: 'cumcore'
+      }))
+          .then((response) => response.json())
+          .then((parsedDBData) => {
+            console.log(parsedDBData)
+            setInterfaceListData(parsedDBData)
+          })
+          .catch((error) => console.error(error));
+      },[]);
+
   const [areaCovered, setAreaCovered] = useState("Area 6");
   const [editingMode, setEditingMode] = useState(false);
   const [savePreviewButton, setSaveButton] = useState("Saved");
-  const switchColumns = [
-    { title: "portid", field: "portid",},
-    { title: "conn", field: "conn"},
-    { title: "vlan", field: "vlan"},
+  const switchInterfaceListColumns = [
+    { title: "hostname", field: "hostname",},
+    { title: "interface", field: "interface"},
+    { title: "description", field: "description"},
     { title: "verified", field: "verified"},
-    { title: "initial", field: "initial"},
+    { title: "swportmode", field: "swportmode"},
+    { title: "admindown", field: "admindown"},
   ];
   const VLANColumns = [
     { title: "vlan", field: "vlan", width: 150},
@@ -131,8 +145,8 @@ function Home() {
             <div class="infoContainer">
             <ReactTabulator
                 selectable={1}
-                data={switchData}
-                columns={switchColumns}
+                data={switchInterfaceListData}
+                columns={switchInterfaceListColumns}
                 layout={"fitColumns"}
               />
             </div>

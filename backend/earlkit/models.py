@@ -30,16 +30,15 @@ class VisualizerSwitchList(models.Model):
     def __self__(self):
         return self.title
 
-# class VisualizerSwitchPorts(models.Model):
-#     switchUID=models.ForeignKey(switchuid)
-#     switchportuid=models.CharField(primary_key=True,default=uuid.uuid4,unique=True,null=False,editable=False,max_length=15)
-#     portid=models.CharField(max_length=50)
-#     desc=models.CharField(max_length=100)
-#     vlan=models.CharField(max_length=50)
-#     verified=models.CharField(max_length=50)
-#     initial=models.CharField(max_length=50)
-#     active=models.BooleanField(default=False)
-
+class VisualizerInterfaceList(models.Model):
+    # switchUID=models.ForeignKey(switchuid)
+    switchInterfaceUID=models.CharField(primary_key=True,default=uuid.uuid4,unique=True,null=False,editable=False,max_length=15)
+    hostname=models.CharField(max_length=50, default='')
+    interface=models.CharField(max_length=50)
+    description=models.CharField(max_length=100)
+    verified=models.CharField(max_length=50)
+    swportmode=models.CharField(max_length=50)
+    admindown=models.CharField(max_length=50)
 
 
     def __self__(self):

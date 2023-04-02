@@ -8,3 +8,7 @@ class EarlkitConfig(AppConfig):
 class VisualizerSwitchListConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
     name = 'visualizerSwitchList'
+
+class VisualizerInterfaceListConfig(AppConfig):
+    default_auto_field = 'django.db.models.BigAutoField'
+    name = 'visualizerInterfaceList'
