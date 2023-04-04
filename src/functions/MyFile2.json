@@ -1,9 +1,0 @@
-[
-    {
-        "pk":"4b678b301dfd8a4e0dad910de3ae245b",
-        "model":"earlkit.VisualizerInterfaceList",
-        "fields":{
-            "hostname": "ComCoreSW1", "interface": "interface Port-channel1", "description": " description VSS Link", "verified": "", "swportmode": "trunk", "admindown": "Not Administratively Down"
-        }
-    }
-]

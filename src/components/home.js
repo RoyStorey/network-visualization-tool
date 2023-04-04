@@ -22,9 +22,7 @@ function Home() {
     },[]);
 
     useEffect(()=>{
-      fetch(`http://172.16.220.110:8000/api/VisualizerInterfaceList/?format=json` + new URLSearchParams({
-        hostname: 'cumcore'
-      }))
+      fetch(`http://172.16.220.110:8000/api/VisualizerInterfaceList/?format=json`)
           .then((response) => response.json())
           .then((parsedDBData) => {
             console.log(parsedDBData)
@@ -104,51 +102,51 @@ function Home() {
     <div class="toolContainer">
       <div class="top-container">
         <div class="top-cell-container">
-        <header>
-              <h2>Current Switch: {selectedswitch.switch}</h2>
-            </header>
+          <header>
+            <h2>Current Switch: {selectedswitch.switch}</h2>
+          </header>
           <div class="switchContainer">
-            <div class="placeholder-port "></div>
-            <div class="placeholder-port "></div>
-            <div class="placeholder-port "></div>
-            <div class="placeholder-port "></div>
-            <div class="placeholder-port "></div>
-            <div class="placeholder-port "></div>
-            <div class="placeholder-port "></div>
-            <div class="placeholder-port "></div>
-            <div class="placeholder-port "></div>
-            <div class="placeholder-port "></div>
-            <div class="placeholder-port "></div>
-            <div class="placeholder-port "></div>
-            <div class="placeholder-port "></div>
-            <div class="placeholder-port "></div>
-            <div class="placeholder-port"></div>
-            <div class="placeholder-port"></div>
-            <div class="placeholder-port "></div>
-            <div class="placeholder-port "></div>
-            <div class="placeholder-port "></div>
-            <div class="placeholder-port "></div>
-            <div class="placeholder-port "></div>
-            <div class="placeholder-port "></div>
-            <div class="placeholder-port "></div>
-            <div class="placeholder-port "></div>
-            <div class="placeholder-port "></div>
-            <div class="placeholder-port "></div>
-            <div class="placeholder-port "></div>
-            <div class="placeholder-port "></div>
-            <div class="placeholder-port "></div>
-            <div class="placeholder-port "></div>
-            <div class="placeholder-port"></div>
-            <div class="placeholder-port"></div>    
+              <div class="placeholder-port "></div>
+              <div class="placeholder-port "></div>
+              <div class="placeholder-port "></div>
+              <div class="placeholder-port "></div>
+              <div class="placeholder-port "></div>
+              <div class="placeholder-port "></div>
+              <div class="placeholder-port "></div>
+              <div class="placeholder-port "></div>
+              <div class="placeholder-port "></div>
+              <div class="placeholder-port "></div>
+              <div class="placeholder-port "></div>
+              <div class="placeholder-port "></div>
+              <div class="placeholder-port "></div>
+              <div class="placeholder-port "></div>
+              <div class="placeholder-port"></div>
+              <div class="placeholder-port"></div>
+              <div class="placeholder-port "></div>
+              <div class="placeholder-port "></div>
+              <div class="placeholder-port "></div>
+              <div class="placeholder-port "></div>
+              <div class="placeholder-port "></div>
+              <div class="placeholder-port "></div>
+              <div class="placeholder-port "></div>
+              <div class="placeholder-port "></div>
+              <div class="placeholder-port "></div>
+              <div class="placeholder-port "></div>
+              <div class="placeholder-port "></div>
+              <div class="placeholder-port "></div>
+              <div class="placeholder-port "></div>
+              <div class="placeholder-port "></div>
+              <div class="placeholder-port"></div>
+              <div class="placeholder-port"></div>    
           </div>
           <div class="switchInfo">
             <div class="infoContainer">
-            <ReactTabulator
-                selectable={1}
-                data={switchInterfaceListData}
-                columns={switchInterfaceListColumns}
-                layout={"fitColumns"}
-              />
+              <ReactTabulator
+                  selectable={1}
+                  data={switchInterfaceListData}
+                  columns={switchInterfaceListColumns}
+                  layout={"fitColumns"}
+                />
             </div>
           </div>
         </div>
@@ -165,6 +163,8 @@ function Home() {
           </div>
         </div>
       </div>
+
+      
       <div class="bottom-Side">
         <div class="bottom-Header">
           <h2>Switches for {areaCovered}</h2>

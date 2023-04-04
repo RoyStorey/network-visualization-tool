@@ -1,9 +1,13 @@
 from ciscoconfparse import CiscoConfParse
 import datetime
+import string
+import random
 
 parse = CiscoConfParse("example.conf", syntax="ios")
 
 interfaceArray = []
+
+
 
 class interfaceObject:
     def __init__(intObj, hostname, interface, description, verified, swportmode, admindown):
@@ -15,13 +19,14 @@ class interfaceObject:
         intObj.admindown = admindown
 
     def pushInterfaceObject(intObj):
-        interfaceArray.append({"hostname":intObj.hostname,"interface":intObj.interface,"description":intObj.description, "verified": intObj.verified, "swportmode": intObj.swportmode, "admindown": intObj.admindown})
+        randomstring = ''.join(random.choices(string.ascii_uppercase + string.digits, k=12))
+        pushthing = ({"hostname":intObj.hostname,"interface":intObj.interface,"description":intObj.description, "verified": intObj.verified, "swportmode": intObj.swportmode, "admindown": intObj.admindown})
         filecontents = [
     {
-        "pk":"4b678b301dfd8a4e0dad910de3ae245b",
+        "pk":randomstring,
         "model":"earlkit.VisualizerInterfaceList",
         "fields":{
-            str(interfaceArray)
+            str(pushthing)
         }
     }
 ]
@@ -43,7 +48,7 @@ for intf_obj in parse.find_objects("^interface"):
         # print(childobject)
 
         if childobject.find("description") == 1:
-            currentDescription = childobject
+            currentDescription = childobject.replace('"', '')
         else:
             pass
 
@@ -65,6 +70,7 @@ for intf_obj in parse.find_objects("^interface"):
         dateVerified = ""
 
     currentIntObj = interfaceObject(currentHostname, currentInterface, currentDescription, dateVerified, switchportMode, adminDown)
+    print(currentHostname, currentInterface, currentDescription, dateVerified, switchportMode, adminDown)
     currentIntObj.pushInterfaceObject()
 
-print(interfaceArray)
+# print(interfaceArray)
