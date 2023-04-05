@@ -1,0 +1,14 @@
+[
+    {
+        "pk": "ETH0WOLBP73P",
+        "model": "earlkit.VisualizerInterfaceList",
+        "fields": {
+            "hostname": "ComCoreSW1",
+            "interface": "TenGigabitEthernet2/1/19",
+            "description": "MDT Server - ESXI2 VMNIC04",
+            "verified": "",
+            "swportmode": "",
+            "admindown": "Not Administratively Down"
+        }
+    }
+]

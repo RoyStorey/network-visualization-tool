@@ -1,0 +1,14 @@
+[
+    {
+        "pk": "5K0YHU0PZIQM",
+        "model": "earlkit.VisualizerInterfaceList",
+        "fields": {
+            "hostname": "ComCoreSW1",
+            "interface": "Vlan53",
+            "description": "Verodin",
+            "verified": "",
+            "swportmode": "",
+            "admindown": "Administratively Down"
+        }
+    }
+]

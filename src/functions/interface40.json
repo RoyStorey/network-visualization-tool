@@ -1,0 +1,14 @@
+[
+    {
+        "pk": "S8S1EEU4LAVS",
+        "model": "earlkit.VisualizerInterfaceList",
+        "fields": {
+            "hostname": "ComCoreSW1",
+            "interface": "TenGigabitEthernet2/1/6",
+            "description": "SCOV Section Chief MSgt Wickham",
+            "verified": "",
+            "swportmode": "access",
+            "admindown": "Not Administratively Down"
+        }
+    }
+]

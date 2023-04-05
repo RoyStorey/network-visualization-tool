@@ -1,0 +1,14 @@
+[
+    {
+        "pk": "EQXEL0GJADJ5",
+        "model": "earlkit.VisualizerInterfaceList",
+        "fields": {
+            "hostname": "ComCoreSW1",
+            "interface": "TenGigabitEthernet2/1/32",
+            "description": "Stack Data Link",
+            "verified": "",
+            "swportmode": "trunk",
+            "admindown": "Not Administratively Down"
+        }
+    }
+]

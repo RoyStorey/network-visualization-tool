@@ -1,0 +1,14 @@
+[
+    {
+        "pk": "FQ6AMFPL54XT",
+        "model": "earlkit.VisualizerInterfaceList",
+        "fields": {
+            "hostname": "ComCoreSW1",
+            "interface": "TenGigabitEthernet2/1/16",
+            "description": "ESXi2",
+            "verified": "",
+            "swportmode": "trunk",
+            "admindown": "Not Administratively Down"
+        }
+    }
+]

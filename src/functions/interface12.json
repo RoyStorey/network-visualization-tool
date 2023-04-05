@@ -1,0 +1,14 @@
+[
+    {
+        "pk": "71TQSNFIZM4Y",
+        "model": "earlkit.VisualizerInterfaceList",
+        "fields": {
+            "hostname": "ComCoreSW1",
+            "interface": "TenGigabitEthernet1/1/10",
+            "description": "SMARTBOARD",
+            "verified": "",
+            "swportmode": "access",
+            "admindown": "Not Administratively Down"
+        }
+    }
+]

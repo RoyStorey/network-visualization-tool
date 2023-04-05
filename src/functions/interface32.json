@@ -1,0 +1,14 @@
+[
+    {
+        "pk": "D484PJ8N2QES",
+        "model": "earlkit.VisualizerInterfaceList",
+        "fields": {
+            "hostname": "ComCoreSW1",
+            "interface": "TenGigabitEthernet1/1/30",
+            "description": "Comcast Router",
+            "verified": "",
+            "swportmode": "access",
+            "admindown": "Not Administratively Down"
+        }
+    }
+]

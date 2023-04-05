@@ -1,0 +1,14 @@
+[
+    {
+        "pk": "W1D3UU0YE949",
+        "model": "earlkit.VisualizerInterfaceList",
+        "fields": {
+            "hostname": "ComCoreSW1",
+            "interface": "TenGigabitEthernet1/1/4",
+            "description": "DOTNET",
+            "verified": "",
+            "swportmode": "access",
+            "admindown": "Not Administratively Down"
+        }
+    }
+]

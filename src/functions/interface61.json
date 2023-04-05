@@ -1,0 +1,14 @@
+[
+    {
+        "pk": "MEF5CL39440B",
+        "model": "earlkit.VisualizerInterfaceList",
+        "fields": {
+            "hostname": "ComCoreSW1",
+            "interface": "TenGigabitEthernet2/1/27",
+            "description": "Synology NAS Fiber Bond",
+            "verified": "",
+            "swportmode": "access",
+            "admindown": "Administratively Down"
+        }
+    }
+]

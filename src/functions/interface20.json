@@ -1,0 +1,14 @@
+[
+    {
+        "pk": "ZROBZ81N39DO",
+        "model": "earlkit.VisualizerInterfaceList",
+        "fields": {
+            "hostname": "ComCoreSW1",
+            "interface": "TenGigabitEthernet1/1/18",
+            "description": "ESXi1 Nic8 Trunk",
+            "verified": "",
+            "swportmode": "trunk",
+            "admindown": "Not Administratively Down"
+        }
+    }
+]

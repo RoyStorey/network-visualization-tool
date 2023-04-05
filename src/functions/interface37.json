@@ -1,0 +1,14 @@
+[
+    {
+        "pk": "K9BCXDXGO1AL",
+        "model": "earlkit.VisualizerInterfaceList",
+        "fields": {
+            "hostname": "ComCoreSW1",
+            "interface": "TenGigabitEthernet2/1/3",
+            "description": "PXE Boot MX",
+            "verified": "",
+            "swportmode": "access",
+            "admindown": "Administratively Down"
+        }
+    }
+]

@@ -1,0 +1,14 @@
+[
+    {
+        "pk": "1UC5G7TZLNC7",
+        "model": "earlkit.VisualizerInterfaceList",
+        "fields": {
+            "hostname": "ComCoreSW1",
+            "interface": "Vlan220",
+            "description": "New MDT User VLAN",
+            "verified": "",
+            "swportmode": "",
+            "admindown": "Administratively Down"
+        }
+    }
+]

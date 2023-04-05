@@ -1,0 +1,14 @@
+[
+    {
+        "pk": "EGGPT155Z1DM",
+        "model": "earlkit.VisualizerInterfaceList",
+        "fields": {
+            "hostname": "ComCoreSW1",
+            "interface": "TenGigabitEthernet1/1/28",
+            "description": "SamFoxCyber Wifi - 89 CS/CC Office AP",
+            "verified": "",
+            "swportmode": "access",
+            "admindown": "Not Administratively Down"
+        }
+    }
+]

@@ -1,0 +1,14 @@
+[
+    {
+        "pk": "4IVWA5WVWDRQ",
+        "model": "earlkit.VisualizerInterfaceList",
+        "fields": {
+            "hostname": "ComCoreSW1",
+            "interface": "TenGigabitEthernet2/1/24",
+            "description": "DEAD",
+            "verified": "",
+            "swportmode": "",
+            "admindown": "Administratively Down"
+        }
+    }
+]

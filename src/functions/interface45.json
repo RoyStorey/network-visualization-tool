@@ -1,0 +1,14 @@
+[
+    {
+        "pk": "4YKNS2DZWKC7",
+        "model": "earlkit.VisualizerInterfaceList",
+        "fields": {
+            "hostname": "ComCoreSW1",
+            "interface": "TenGigabitEthernet2/1/11",
+            "description": "Clearcube Blade 6:6",
+            "verified": "",
+            "swportmode": "access",
+            "admindown": "Not Administratively Down"
+        }
+    }
+]

@@ -1,0 +1,14 @@
+[
+    {
+        "pk": "LNIF1HV55Y3J",
+        "model": "earlkit.VisualizerInterfaceList",
+        "fields": {
+            "hostname": "ComCoreSW1",
+            "interface": "TenGigabitEthernet2/1/28",
+            "description": "CVAH Clus ESXi3 .200 vmNic5",
+            "verified": "",
+            "swportmode": "trunk",
+            "admindown": "Not Administratively Down"
+        }
+    }
+]

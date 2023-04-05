@@ -1,0 +1,14 @@
+[
+    {
+        "pk": "P95518K15WX1",
+        "model": "earlkit.VisualizerInterfaceList",
+        "fields": {
+            "hostname": "ComCoreSW1",
+            "interface": "TenGigabitEthernet1/1/5",
+            "description": "Clearcube Blade 6:1",
+            "verified": "",
+            "swportmode": "access",
+            "admindown": "Not Administratively Down"
+        }
+    }
+]

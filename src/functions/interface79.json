@@ -1,0 +1,14 @@
+[
+    {
+        "pk": "FFU207GRDOVJ",
+        "model": "earlkit.VisualizerInterfaceList",
+        "fields": {
+            "hostname": "ComCoreSW1",
+            "interface": "Vlan1735",
+            "description": "CVAH Internal vLan",
+            "verified": "",
+            "swportmode": "",
+            "admindown": "Administratively Down"
+        }
+    }
+]

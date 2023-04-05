@@ -1,0 +1,14 @@
+[
+    {
+        "pk": "YZD5911A81NH",
+        "model": "earlkit.VisualizerInterfaceList",
+        "fields": {
+            "hostname": "ComCoreSW1",
+            "interface": "TenGigabitEthernet2/1/17",
+            "description": "ESXi2 Nic9 Trunk",
+            "verified": "",
+            "swportmode": "trunk",
+            "admindown": "Not Administratively Down"
+        }
+    }
+]

@@ -1,0 +1,14 @@
+[
+    {
+        "pk": "75KMSM57TOZW",
+        "model": "earlkit.VisualizerInterfaceList",
+        "fields": {
+            "hostname": "ComCoreSW1",
+            "interface": "Vlan200",
+            "description": "New Management VLAN",
+            "verified": "",
+            "swportmode": "",
+            "admindown": "Administratively Down"
+        }
+    }
+]

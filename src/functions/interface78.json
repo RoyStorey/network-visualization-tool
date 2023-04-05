@@ -1,0 +1,14 @@
+[
+    {
+        "pk": "NIBJJ7SNQYJT",
+        "model": "earlkit.VisualizerInterfaceList",
+        "fields": {
+            "hostname": "ComCoreSW1",
+            "interface": "Vlan666",
+            "description": "DEAD",
+            "verified": "",
+            "swportmode": "",
+            "admindown": "Administratively Down"
+        }
+    }
+]

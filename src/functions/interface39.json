@@ -1,0 +1,14 @@
+[
+    {
+        "pk": "4OPGQ4ZRW0IK",
+        "model": "earlkit.VisualizerInterfaceList",
+        "fields": {
+            "hostname": "ComCoreSW1",
+            "interface": "TenGigabitEthernet2/1/5",
+            "description": "Link to MX SW",
+            "verified": "",
+            "swportmode": "trunk",
+            "admindown": "Not Administratively Down"
+        }
+    }
+]

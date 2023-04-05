@@ -1,0 +1,14 @@
+[
+    {
+        "pk": "ESFLHI1AGQ09",
+        "model": "earlkit.VisualizerInterfaceList",
+        "fields": {
+            "hostname": "ComCoreSW1",
+            "interface": "Port-channel2",
+            "description": "",
+            "verified": "",
+            "swportmode": "trunk",
+            "admindown": "Not Administratively Down"
+        }
+    }
+]

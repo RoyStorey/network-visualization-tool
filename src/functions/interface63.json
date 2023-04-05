@@ -1,0 +1,14 @@
+[
+    {
+        "pk": "BJ3LR323WX2D",
+        "model": "earlkit.VisualizerInterfaceList",
+        "fields": {
+            "hostname": "ComCoreSW1",
+            "interface": "TenGigabitEthernet2/1/29",
+            "description": "ESXi MDT-Proc02",
+            "verified": "",
+            "swportmode": "trunk",
+            "admindown": "Not Administratively Down"
+        }
+    }
+]

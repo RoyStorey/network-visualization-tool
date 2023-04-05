@@ -1,0 +1,14 @@
+[
+    {
+        "pk": "FAVZWQ14ZTB7",
+        "model": "earlkit.VisualizerInterfaceList",
+        "fields": {
+            "hostname": "ComCoreSW1",
+            "interface": "TenGigabitEthernet1/1/24",
+            "description": "NAS",
+            "verified": "",
+            "swportmode": "access",
+            "admindown": "Administratively Down"
+        }
+    }
+]

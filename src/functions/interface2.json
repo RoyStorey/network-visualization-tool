@@ -1,0 +1,14 @@
+[
+    {
+        "pk": "QE4DV1R08D88",
+        "model": "earlkit.VisualizerInterfaceList",
+        "fields": {
+            "hostname": "ComCoreSW1",
+            "interface": "FastEthernet1",
+            "description": "",
+            "verified": "",
+            "swportmode": "",
+            "admindown": "Not Administratively Down"
+        }
+    }
+]

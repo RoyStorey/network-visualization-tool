@@ -1,0 +1,14 @@
+[
+    {
+        "pk": "TJFUSZYU1DYC",
+        "model": "earlkit.VisualizerInterfaceList",
+        "fields": {
+            "hostname": "ComCoreSW1",
+            "interface": "TenGigabitEthernet1/1/13",
+            "description": "Display-Laptop-02",
+            "verified": "",
+            "swportmode": "access",
+            "admindown": "Not Administratively Down"
+        }
+    }
+]

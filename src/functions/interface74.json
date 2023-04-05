@@ -1,0 +1,14 @@
+[
+    {
+        "pk": "AX0054HAL7UH",
+        "model": "earlkit.VisualizerInterfaceList",
+        "fields": {
+            "hostname": "ComCoreSW1",
+            "interface": "Vlan100",
+            "description": "",
+            "verified": "",
+            "swportmode": "",
+            "admindown": "Administratively Down"
+        }
+    }
+]

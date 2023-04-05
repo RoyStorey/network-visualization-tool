@@ -1,0 +1,14 @@
+[
+    {
+        "pk": "NE3067HT2OXI",
+        "model": "earlkit.VisualizerInterfaceList",
+        "fields": {
+            "hostname": "ComCoreSW1",
+            "interface": "TenGigabitEthernet1/1/26",
+            "description": "SamFoxCyber Wifi - 89 CS/SCX Office AP",
+            "verified": "",
+            "swportmode": "access",
+            "admindown": "Not Administratively Down"
+        }
+    }
+]

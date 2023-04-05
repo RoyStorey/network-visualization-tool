@@ -1,0 +1,14 @@
+[
+    {
+        "pk": "I1SUG0S8E22W",
+        "model": "earlkit.VisualizerInterfaceList",
+        "fields": {
+            "hostname": "ComCoreSW1",
+            "interface": "TenGigabitEthernet2/1/1",
+            "description": "Stack Supervisor Link",
+            "verified": "",
+            "swportmode": "",
+            "admindown": "Not Administratively Down"
+        }
+    }
+]

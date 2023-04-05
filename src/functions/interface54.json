@@ -1,0 +1,14 @@
+[
+    {
+        "pk": "PFOJ9V6WVORS",
+        "model": "earlkit.VisualizerInterfaceList",
+        "fields": {
+            "hostname": "ComCoreSW1",
+            "interface": "TenGigabitEthernet2/1/20",
+            "description": "NEC Drop",
+            "verified": "",
+            "swportmode": "access",
+            "admindown": "Not Administratively Down"
+        }
+    }
+]

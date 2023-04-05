@@ -1,0 +1,14 @@
+[
+    {
+        "pk": "59HB4WG9RI9L",
+        "model": "earlkit.VisualizerInterfaceList",
+        "fields": {
+            "hostname": "ComCoreSW1",
+            "interface": "Vlan20",
+            "description": "",
+            "verified": "",
+            "swportmode": "",
+            "admindown": "Administratively Down"
+        }
+    }
+]

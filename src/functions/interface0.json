@@ -1,0 +1,14 @@
+[
+    {
+        "pk": "XRFDV7LEN84U",
+        "model": "earlkit.VisualizerInterfaceList",
+        "fields": {
+            "hostname": "ComCoreSW1",
+            "interface": "Port-channel1",
+            "description": "VSS Link",
+            "verified": "",
+            "swportmode": "trunk",
+            "admindown": "Not Administratively Down"
+        }
+    }
+]

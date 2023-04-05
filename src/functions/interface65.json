@@ -1,0 +1,14 @@
+[
+    {
+        "pk": "NV8DFE1ZNPO1",
+        "model": "earlkit.VisualizerInterfaceList",
+        "fields": {
+            "hostname": "ComCoreSW1",
+            "interface": "TenGigabitEthernet2/1/31",
+            "description": "Stack Data Link",
+            "verified": "",
+            "swportmode": "trunk",
+            "admindown": "Not Administratively Down"
+        }
+    }
+]

@@ -1,0 +1,14 @@
+[
+    {
+        "pk": "MHF6AWN50E7G",
+        "model": "earlkit.VisualizerInterfaceList",
+        "fields": {
+            "hostname": "ComCoreSW1",
+            "interface": "Vlan49",
+            "description": "Svr Vlan",
+            "verified": "",
+            "swportmode": "",
+            "admindown": "Administratively Down"
+        }
+    }
+]

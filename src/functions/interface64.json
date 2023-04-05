@@ -1,0 +1,14 @@
+[
+    {
+        "pk": "DU6J4EWVE2O6",
+        "model": "earlkit.VisualizerInterfaceList",
+        "fields": {
+            "hostname": "ComCoreSW1",
+            "interface": "TenGigabitEthernet2/1/30",
+            "description": "ESXi MDT-Proc02",
+            "verified": "",
+            "swportmode": "trunk",
+            "admindown": "Not Administratively Down"
+        }
+    }
+]

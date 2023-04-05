@@ -1,0 +1,14 @@
+[
+    {
+        "pk": "RQ0K47NN7F6G",
+        "model": "earlkit.VisualizerInterfaceList",
+        "fields": {
+            "hostname": "ComCoreSW1",
+            "interface": "TenGigabitEthernet1/1/2",
+            "description": "Link to GSOC SW -> G0/2",
+            "verified": "",
+            "swportmode": "trunk",
+            "admindown": "Not Administratively Down"
+        }
+    }
+]

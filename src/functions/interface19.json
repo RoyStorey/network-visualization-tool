@@ -1,0 +1,14 @@
+[
+    {
+        "pk": "LYHVRWLS5ICJ",
+        "model": "earlkit.VisualizerInterfaceList",
+        "fields": {
+            "hostname": "ComCoreSW1",
+            "interface": "TenGigabitEthernet1/1/17",
+            "description": "ESXi2 Nic8 Trunk",
+            "verified": "",
+            "swportmode": "trunk",
+            "admindown": "Not Administratively Down"
+        }
+    }
+]

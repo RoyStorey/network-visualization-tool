@@ -1,0 +1,14 @@
+[
+    {
+        "pk": "V5XWHU7S0D3H",
+        "model": "earlkit.VisualizerInterfaceList",
+        "fields": {
+            "hostname": "ComCoreSW1",
+            "interface": "Vlan240",
+            "description": "SAMFOXCYBER Wifi",
+            "verified": "",
+            "swportmode": "",
+            "admindown": "Administratively Down"
+        }
+    }
+]

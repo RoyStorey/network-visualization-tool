@@ -1,0 +1,14 @@
+[
+    {
+        "pk": "U97R5MJYNEVZ",
+        "model": "earlkit.VisualizerInterfaceList",
+        "fields": {
+            "hostname": "ComCoreSW1",
+            "interface": "Vlan89",
+            "description": "89 CS Comcast",
+            "verified": "",
+            "swportmode": "",
+            "admindown": "Administratively Down"
+        }
+    }
+]

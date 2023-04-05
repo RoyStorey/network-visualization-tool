@@ -1,0 +1,14 @@
+[
+    {
+        "pk": "KM5DR22MC1XW",
+        "model": "earlkit.VisualizerInterfaceList",
+        "fields": {
+            "hostname": "ComCoreSW1",
+            "interface": "TenGigabitEthernet1/1/8",
+            "description": "Clearcube Blade 5:1",
+            "verified": "",
+            "swportmode": "access",
+            "admindown": "Not Administratively Down"
+        }
+    }
+]

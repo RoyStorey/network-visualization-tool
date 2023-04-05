@@ -1,0 +1,14 @@
+[
+    {
+        "pk": "HKKOFS1PZWI0",
+        "model": "earlkit.VisualizerInterfaceList",
+        "fields": {
+            "hostname": "ComCoreSW1",
+            "interface": "Vlan57",
+            "description": "DOTNET",
+            "verified": "",
+            "swportmode": "",
+            "admindown": "Administratively Down"
+        }
+    }
+]
