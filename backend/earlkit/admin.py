@@ -10,7 +10,7 @@ class VisualizerAdmin(admin.ModelAdmin):
     list_display = ("switchuid","switch", "bldg", "room", "rack", "panel", "u", "mgmtip", "devtype", "ios", "sn")
 
 class VisualizerInterfaceAdmin(admin.ModelAdmin):
-    list_display = ("hostname", "interface", "description", "verified", "swportmode", "admindown")
+    list_display = ("switchInterfaceUID","hostname", "interface", "description", "verified", "swportmode", "admindown")
 
 
 

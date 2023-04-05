@@ -16,4 +16,4 @@ class VisualizerSwitchListSerializer(serializers.ModelSerializer):
 class VisualizerInterfaceListSerializer(serializers.ModelSerializer):
     class Meta:
         model = VisualizerInterfaceList
-        fields = ("hostname","interface", "description", "verified", "swportmode", "admindown")
+        fields = ("switchInterfaceUID","hostname","interface", "description", "verified", "swportmode", "admindown")

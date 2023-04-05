@@ -3,6 +3,7 @@ import datetime
 import string
 import random
 import json
+import subprocess
 
 parse = CiscoConfParse("example.conf", syntax="ios")
 
@@ -90,6 +91,10 @@ for intf_obj in parse.find_objects("^interface"):
         ]
 
     writeInterfaceObject(currentIntObj, i)
+
+    pushCommand = f"python3 ../../backend/manage.py loaddata ./interface{i}.json --format json"
+    result = subprocess.run(pushCommand, shell=True, capture_output=True, text=True)
+    print(result.stdout)
     
     i = i+1
     print(i)
