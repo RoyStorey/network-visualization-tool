@@ -26,11 +26,11 @@ def writeInterfaceObject(formattedObject, i):
         outfile.write(pushableObject)
 
 def formatInterfaceObject(intObj):
-    randomString = ''.join(random.choices(string.ascii_uppercase + string.digits, k=12))
+    interfaceUID = ''.join(random.choices(string.ascii_uppercase + string.digits, k=12))
     formattedObject = ({"hostname":intObj.hostname,"interface":intObj.interface,"description":intObj.description, "verified": intObj.verified, "swportmode": intObj.swportmode, "admindown": intObj.admindown})
     fileContents = [
         {
-            "pk":randomString,
+            "pk":interfaceUID,
             "model":"earlkit.VisualizerInterfaceList",
             "fields":{
                 str(formattedObject)
@@ -71,19 +71,19 @@ for intf_obj in parse.find_objects("^interface"):
 
         if childobject.find("shutdown") == 1:
             adminDown = "Administratively Down"
-        elif childobject.find("switchport mode trunk") == 1:
-            adminDown = "Not Administratively Down" #FIX
+        elif:
+            adminDown = "Not Administratively Down" 
         else:
             pass
 
         # dateVerified = datetime.datetime.now()
         dateVerified = ""
 
-    randomString = ''.join(random.choices(string.ascii_uppercase + string.digits, k=12))
+    interfaceUID = ''.join(random.choices(string.ascii_uppercase + string.digits, k=12))
 
     currentIntObj = [
         {
-            "pk":randomString,
+            "pk":interfaceUID,
             "model":"earlkit.VisualizerInterfaceList",
             "fields":
                 {"hostname":currentHostname, "interface":currentInterface.lstrip("interface "), "description":currentDescription.lstrip("description "), "verified":dateVerified, "swportmode":switchportMode, "admindown":adminDown}   
