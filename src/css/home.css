@@ -8,19 +8,20 @@
 }
 
 body{
-    background:var(--gray-background);
+    /* background:linear-gradient(0deg, black, rgb(27, 33, 43)); */
+    background:radial-gradient( rgb(22, 22, 22), rgb(17, 26, 41));
     /* background:linear-gradient(160deg ,rgb(191, 193, 199), rgb(255, 255, 255)); */
     color:var(--blue-text);
-    font-family:'Courier New', Courier, monospace;
-    font-weight:100;
+    /* font-family:'Courier New', Courier, monospace; */
+    font-weight:300;
 }
 
 .toolContainer{
     min-height:calc(100vh - 4vh);
     box-sizing: border-box;
-    padding: 4rem 20rem;
+    padding: 2rem 20rem 4rem 20rem;
     display:flex;
-    flex-direction:column;
+    flex-direction:column-reverse;
     gap:4rem;
 }
 footer{

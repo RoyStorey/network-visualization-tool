@@ -1,7 +1,7 @@
 import "../css/home.css";
 import "../css/switch-info.css";
 import "../css/switch-list.css";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect} from "react";
 import '/node_modules/react-tabulator/lib/styles.css';
 import '/node_modules/react-tabulator/css/tabulator_modern.css';
 // import '/node_modules/react-tabulator/css/tabulator_midnight.css';
@@ -25,7 +25,7 @@ function Home() {
       fetch(`http://172.16.220.110:8000/api/VisualizerInterfaceList/?format=json`)
           .then((response) => response.json())
           .then((parsedDBData) => {
-            console.log(parsedDBData)
+            // console.log(parsedDBData)
             setInterfaceListData(parsedDBData)
           })
           .catch((error) => console.error(error));
@@ -45,23 +45,6 @@ function Home() {
   const VLANColumns = [
     { title: "vlan", field: "vlan", width: 150},
     { title: "ips", field: "ips"},
-  ];
-  var switchData = [
-    {portid:'1/1/1', conn:"Stack Supervisor Link", vlan:'Dual-Active',verified:'07/26/22',initial:'JJH'},
-    {portid:'1/1/2', conn:"Link to GSOC SW -> Gig 0/2", vlan:'Trunk',verified:'07/26/22',initial:'JJH'},
-    {portid:'1/1/3', conn:"Video Wall Rack - mx-laptop-02", vlan:'220',verified:'10/04/22',initial:'WFR'},
-    {portid:'1/1/4', conn:"DOT Net Wifi AP", vlan:'57',verified:'10/04/22',initial:'WFR'},
-    {portid:'1/1/5', conn:"SCIF DESK 01 - mdt-clear-01", vlan:'220',verified:'10/04/22',initial:'WFR'},
-    {portid:'1/1/1', conn:"Stack Supervisor Link", vlan:'Dual-Active',verified:'07/26/22',initial:'JJH'},
-    {portid:'1/1/2', conn:"Link to GSOC SW -> Gig 0/2", vlan:'Trunk',verified:'07/26/22',initial:'JJH'},
-    {portid:'1/1/3', conn:"Video Wall Rack - mx-laptop-02", vlan:'220',verified:'10/04/22',initial:'WFR'},
-    {portid:'1/1/4', conn:"DOT Net Wifi AP", vlan:'57',verified:'10/04/22',initial:'WFR'},
-    {portid:'1/1/5', conn:"SCIF DESK 01 - mdt-clear-01", vlan:'220',verified:'10/04/22',initial:'WFR'},
-    {portid:'1/1/1', conn:"Stack Supervisor Link", vlan:'Dual-Active',verified:'07/26/22',initial:'JJH'},
-    {portid:'1/1/2', conn:"Link to GSOC SW -> Gig 0/2", vlan:'Trunk',verified:'07/26/22',initial:'JJH'},
-    {portid:'1/1/3', conn:"Video Wall Rack - mx-laptop-02", vlan:'220',verified:'10/04/22',initial:'WFR'},
-    {portid:'1/1/4', conn:"DOT Net Wifi AP", vlan:'57',verified:'10/04/22',initial:'WFR'},
-    {portid:'1/1/5', conn:"SCIF DESK 01 - mdt-clear-01", vlan:'220',verified:'10/04/22',initial:'WFR'},
   ];
   const switchListColumns = [
     { title: "switch", field: "switch", width: 150,},
@@ -113,7 +96,7 @@ function Home() {
       <div class="top-container">
         <div class="top-cell-container">
           <header>
-            <h2>Current Switch: {selectedswitch.switch}</h2>
+            <h4>Current Switch: {selectedswitch.switch}</h4>
           </header>
           <div class="switchContainer">
               <div class="placeholder-port "></div>
@@ -161,12 +144,15 @@ function Home() {
             </div>
           </div>
         </div>
-        <div class="top-cell-container">
+        <div class="top-cell-container vlan-ip-spreadsheet">
           <div class="switchInfo">
             <div class="infoContainer">
             <ReactTabulator
                 selectable={1}
-                data={switchData}
+                //Go through each interface, find the vlan of that interface. If the vlan is unique, add it to a unique vlans array. This
+                //array is going to be a list of objects. Each object has a specific IP as the key, and the property is going to be the vlan its a part of.
+                //This might be how to do this best?
+                data={switchInterfaceListData}
                 columns={VLANColumns}
                 layout={"fitColumns"}
                 options={{pagination: 'local', paginationSize:'9'}}
@@ -179,7 +165,7 @@ function Home() {
       
       <div class="bottom-Side">
         <div class="bottom-Header">
-          <h2>Switches for {areaCovered}</h2>
+          <h4>Switches for {areaCovered}: Please Select a Switch</h4>
         </div>
         <div class="bottom-Body">
           <div class="spreadsheet">
@@ -188,7 +174,7 @@ function Home() {
               data={switchListData}
               columns={switchListColumns}
               layout={"fitColumns"}
-              options={{pagination: 'local', paginationSize:'6'}}
+              options={{pagination: 'local', paginationSize:'9'}}
             />
           </div>
         </div>

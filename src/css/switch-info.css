@@ -7,9 +7,8 @@
 }
 
 .top-cell-container{
-    flex:1;
+    /* flex:1; */
     /* width:40%; */
-    /* background-color:rgba(0, 0, 0, 0.4); */
     /* border-radius: 1%; */
     display:flex;
     flex-direction: column;
@@ -22,13 +21,13 @@
     max-height:calc(100vh - 8rem);
     gap:1rem;
 }
-.top-cell-container h2{
+.top-cell-container h4{
     margin:0px;
 }
 .switchInfo{
     /* height:100%; */
     /* background-color:rgba(0, 0, 0, 0.4); */
-    width:100%;
+    /* width:100%; */
     flex:1;
     border-radius:3px;
     overflow: hidden;
@@ -64,7 +63,7 @@
 }
 .switchContainer{
     /* position:relative; */
-    /* background:var(--red-gradient); */
+    background:#627Ce0;
     border:var(--blue-text)1px solid;
     min-height:8vh;
     width:100%;
@@ -77,4 +76,9 @@
     padding:.5rem 4rem .5rem .5rem;
     box-sizing: border-box;
     /* flex:1; */
+}
+.vlan-ip-spreadsheet{
+    /* width:50%; */
+    /* flex:1; */
+    width:35%
 }
